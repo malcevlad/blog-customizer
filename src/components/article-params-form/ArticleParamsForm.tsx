@@ -25,11 +25,11 @@ type TArticleParamsFormProps = {
 };
 
 export const ArticleParamsForm = ({ formState }: TArticleParamsFormProps) => {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [selectedArticleState, setSelectedArticleState] =
-		useState(defaultArticleState);
+		useState<ArticleStateType>(defaultArticleState);
 
-	const rootRef = useRef(null);
+	const rootRef = useRef<HTMLDivElement>(null);
 
 	useOutsideClickClose({
 		isOpen,
